@@ -1,4 +1,4 @@
-import {APOLLO_STATE_PROP_NAME, initializeApollo} from "@/apollo";
+import {APOLLO_STATE_PROP_NAME, initializeApollo} from "@/apolloClient";
 import {useMemo} from "react";
 
 function useApollo (pageProps: any){

@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import type { GetStaticProps } from 'next';
 
 import { GET_ADS } from './queryAds';
-import { addApolloState, initializeApollo } from "@/apollo";
+import { addApolloState, initializeApollo } from "@/apolloClient";
 import {Ad} from "@/models/Ad";
 import {AdResponse} from "@/types/Ad";
 
@@ -31,7 +31,7 @@ export default function Home() {
                         <img src={ad.promoteImage} alt={ad.title} className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mr-4 mb-4 md:mb-0" />
                         <div className="flex-grow">
                             <h2 className="text-xl font-semibold mb-2">{ad.title}</h2>
-                            <p className="text-gray-600 mb-2 truncate w-96 pr-4">{ad.description}</p>
+                            <p className="text-gray-600 mb-2 truncate w-52 pr-4">{ad.description}</p>
                             <p className="text-gray-500 mb-2">{ad.location}</p>
                             <a href={`tel:${ad.phoneNumber}`} className="text-rose-500 hover:underline">{ad.phoneNumber}</a>
                         </div>
