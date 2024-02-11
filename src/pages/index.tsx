@@ -6,6 +6,7 @@ import { GET_ADS } from './queryAds';
 import { addApolloState, initializeApollo } from "@/apolloClient";
 import {Ad} from "@/models/Ad";
 import {AdResponse} from "@/types/Ad";
+import Link from "next/link";
 
 export default function Home() {
     const { data, loading, error } = useQuery<AdResponse>(GET_ADS);
@@ -21,8 +22,9 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
-            <h1 className="text-3xl font-bold mb-4">Advertisements</h1>
-
+            <h1 className="text-3xl font-bold mb-4">SuperAdsFly</h1>
+            <p className="px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis doloribus facilis minus officiis repellendus temporibus vel! Architecto at consequatur dolore ducimus hic illo iste maiores minima nihil optio, repudiandae tenetur.</p>
+            <Link href="login">Login</Link>
             {loading && <p className="text-blue-600">loading...</p>}
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 w-full px-4">
